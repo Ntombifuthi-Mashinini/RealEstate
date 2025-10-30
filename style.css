@@ -1,0 +1,271 @@
+:root {
+  --bg-color: #f8f1e4;
+  --text-color: #4b3f2f;
+  --accent-color: #b89f7d;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--accent-color);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  background-image: url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/175/356/original/background.jpg?1761823577');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo img {
+  width: 50px;
+  height: auto;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+#theme-toggle {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: var(--text-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--accent-color);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* HERO */
+#hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: #e4d4c1;
+  border-radius: 10px;
+  margin: 2rem;
+}
+
+#hero h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#hero p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+#cta {
+  background: var(--accent-color);
+  border: none;
+  padding: 0.7rem 1.5rem;
+  color: white;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.3s;
+  border-radius: 5px;
+}
+
+#cta:hover {
+  background: #a48968;
+}
+
+#features {
+  padding: 2rem;
+}
+
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 150px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* PRODUCTS */
+.products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.product {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.product img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.add-to-cart {
+  background: var(--accent-color);
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#cart-items {
+  margin: 1rem;
+}
+
+#checkout {
+  background: #b69b76;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#contact {
+  padding: 3rem 1rem;
+}
+
+#contact form {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+#contact input, 
+#contact textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+#contact button {
+  background: var(--accent-color);
+  border: none;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-top: 1rem;
+  transition: background 0.3s;
+}
+
+#contact button:hover {
+  background: #a48968;
+}
+
+.hidden {
+  display: none;
+}
+
+
+footer {
+  background: var(--accent-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.socials a {
+  color: white;
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .products {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #hero {
+    margin: 1rem;
+  }
+}
