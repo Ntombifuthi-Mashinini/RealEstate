@@ -14,6 +14,13 @@ toggleBtn.addEventListener("click", () => {
   }
 });
 
+const mobileNavBtn = document.getElementById("mobile-nav-toggle");
+const navLinks = document.getElementById("nav-links");
+
+mobileNavBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+
 const addButtons = document.querySelectorAll(".add-to-cart");
 const cartDiv = document.getElementById("cart-items");
 let cart = [];

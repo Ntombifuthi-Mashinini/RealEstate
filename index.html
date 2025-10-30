@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  
+
   <header>
     <div class="header-container">
       <div class="logo">
@@ -15,18 +15,8 @@
         <span>Royal Estate</span>
       </div>
 
-      <nav class="nav-desktop">
-        <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#cart">Properties</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-
-      <nav class="nav-mobile">
-        <button id="mobile-menu-toggle">☰</button>
-        <ul class="mobile-menu">
+      <nav>
+        <ul id="nav-links">
           <li><a href="#hero">Home</a></li>
           <li><a href="#features">Features</a></li>
           <li><a href="#cart">Properties</a></li>
@@ -35,6 +25,7 @@
       </nav>
 
       <button id="theme-toggle" title="Toggle Theme">🌙</button>
+      <button id="mobile-nav-toggle">☰</button>
     </div>
   </header>
 
@@ -57,6 +48,7 @@
 
   <section id="cart">
     <h2>Our Properties</h2>
+
     <div class="products">
       <div class="product">
         <img src="images/home apartment.jpg" alt="Modern Apartment">
@@ -64,12 +56,14 @@
         <p>R1,200,000</p>
         <button class="add-to-cart">Add to Cart</button>
       </div>
+
       <div class="product">
         <img src="images/Luxury Villa.jpg" alt="Luxury Villa">
         <h3>Luxury Villa</h3>
         <p>R2,500,000</p>
         <button class="add-to-cart">Add to Cart</button>
       </div>
+
       <div class="product">
         <img src="images/mansion.jpg" alt="Elegant Mansion">
         <h3>Elegant Mansion</h3>
@@ -77,6 +71,7 @@
         <button class="add-to-cart">Add to Cart</button>
       </div>
     </div>
+
     <div id="cart-items"></div>
     <button id="checkout">Checkout</button>
   </section>
@@ -87,7 +82,7 @@
       <input type="text" id="name" placeholder="Your Name">
       <input type="email" id="email" placeholder="Your Email">
       <textarea id="message" placeholder="Your Message"></textarea>
-      <button type="submit">Send</button>
+      <button type="submit" id="send-btn">Send</button>
     </form>
     <p id="success-message" class="hidden">Thank you! We’ll get back to you soon.</p>
   </section>
@@ -104,3 +99,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
