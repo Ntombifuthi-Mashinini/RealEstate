@@ -12,7 +12,7 @@ body {
 
 
 header {
-  background-color: #b89f7d;
+  background-color: #4b3f2f;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -158,7 +158,6 @@ h2::after {
   width: 150px;
 }
 
-/* ===== Products Section ===== */
 .products {
   display: flex;
   flex-wrap: wrap;
@@ -192,7 +191,6 @@ h2::after {
   cursor: pointer;
 }
 
-/* ===== Cart Section ===== */
 #cart-items {
   margin: 1rem;
 }
@@ -208,7 +206,6 @@ h2::after {
   margin: 1rem auto;
 }
 
-/* ===== Contact Section ===== */
 #contact {
   background: #efe2d0;
   padding: 2rem 1rem;
@@ -252,13 +249,72 @@ textarea {
   display: none;
 }
 
-/* ===== Footer ===== */
 footer {
-  background: #b89f7d;
+  background: #4b3f2f;
   color: white;
+  padding: 1rem 2rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
   text-align: center;
-  padding: 1rem;
 }
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s;
+}
+
+.footer-nav a:hover {
+  opacity: 0.8;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #b89f7d;
+}
+
+.footer-note {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
 
 .socials a {
   color: white;
