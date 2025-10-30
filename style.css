@@ -2,7 +2,6 @@
   --bg-color: #f8f1e4;
   --text-color: #4b3f2f;
   --accent-color: #b89f7d;
-  --header-bg: url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/175/356/original/background.jpg?1761823577');
 }
 
 body {
@@ -21,15 +20,23 @@ header {
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
-  background-image: var(--header-bg);
+  background-image: url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/175/356/original/background.jpg?1761823577');
   background-size: cover;
   background-position: center;
+  color: white;
 }
 
 .logo {
   font-weight: bold;
   font-size: 1.5rem;
-  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo img {
+  width: 50px;
+  height: auto;
 }
 
 nav ul {
@@ -52,18 +59,44 @@ nav a:hover {
 #theme-toggle {
   background: transparent;
   border: none;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   cursor: pointer;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: var(--text-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--accent-color);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
 }
 
 #hero {
   text-align: center;
-  padding: 3rem 1rem;
+  padding: 4rem 1rem;
   background: #e4d4c1;
+  border-radius: 10px;
+  margin: 2rem;
 }
 
 #hero h1 {
   font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#hero p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
 }
 
 #cta {
@@ -81,13 +114,6 @@ nav a:hover {
   background: #a48968;
 }
 
-h2 {
-  text-align: center;
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  color: var(--text-color);
-}
-
 #features {
   padding: 2rem;
 }
@@ -100,15 +126,18 @@ h2 {
 }
 
 .feature-card {
-  background: #f5e9db;
+  background: white;
   border-radius: 10px;
-  padding: 1rem;
+  padding: 1.5rem;
   width: 150px;
-  transition: transform 0.3s;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .feature-card:hover {
   transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
 .products {
@@ -120,16 +149,18 @@ h2 {
 }
 
 .product {
-  background: #f1e3cf;
+  background: white;
   padding: 1rem;
   border-radius: 10px;
   text-align: center;
   width: 250px;
-  transition: transform 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .product:hover {
   transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
 .product img {
@@ -147,11 +178,64 @@ h2 {
   padding: 0.5rem 1rem;
   cursor: pointer;
   border-radius: 5px;
+}
+
+#cart-items {
+  margin: 1rem;
+}
+
+#checkout {
+  background: #b69b76;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#contact {
+  padding: 3rem 1rem;
+}
+
+#contact form {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+#contact input, 
+#contact textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+#contact button {
+  background: var(--accent-color);
+  border: none;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-top: 1rem;
   transition: background 0.3s;
 }
 
-.add-to-cart:hover {
+#contact button:hover {
   background: #a48968;
+}
+
+.hidden {
+  display: none;
 }
 
 #checkout {
@@ -171,42 +255,6 @@ h2 {
   background: #a48968;
 }
 
-#cart-items {
-  margin: 1rem;
-}
-
-#contact {
-  background: #efe2d0;
-  padding: 2rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  width: 90%;
-  max-width: 400px;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.hidden {
-  display: none;
-}
 
 footer {
   background: var(--accent-color);
@@ -230,5 +278,9 @@ footer {
   .products {
     flex-direction: column;
     align-items: center;
+  }
+  
+  #hero {
+    margin: 1rem;
   }
 }
