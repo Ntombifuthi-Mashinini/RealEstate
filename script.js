@@ -96,3 +96,7 @@ form.addEventListener("submit", (e) => {
   successMsg.classList.remove("hidden");
   form.reset();
 });
+
+document.getElementById("cta").addEventListener("click", () => {
+  document.getElementById("cart").scrollIntoView({ behavior: "smooth" });
+});
