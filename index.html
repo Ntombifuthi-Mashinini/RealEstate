@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Royal Estates</title>
+  <title>Royal Estate</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <header style="background-image: url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/175/356/original/background.jpg?1761823577');">
-
+  
+  <header>
     <div class="header-container">
       <div class="logo">
         <img src="images/Royal estates logo.png" alt="Royal Estate Logo">
         <span>Royal Estate</span>
       </div>
-      <nav>
+
+      <nav class="nav-desktop">
         <ul>
           <li><a href="#hero">Home</a></li>
           <li><a href="#features">Features</a></li>
@@ -23,6 +23,17 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+
+      <nav class="nav-mobile">
+        <button id="mobile-menu-toggle">☰</button>
+        <ul class="mobile-menu">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#cart">Properties</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
       <button id="theme-toggle" title="Toggle Theme">🌙</button>
     </div>
   </header>
@@ -32,7 +43,6 @@
     <p>Find your dream property with elegance and comfort.</p>
     <button id="cta">Explore Listings</button>
   </section>
-
 
   <section id="features">
     <h2>Why Choose Royal Estate</h2>
@@ -47,7 +57,6 @@
 
   <section id="cart">
     <h2>Our Properties</h2>
-
     <div class="products">
       <div class="product">
         <img src="images/home apartment.jpg" alt="Modern Apartment">
@@ -55,14 +64,12 @@
         <p>R1,200,000</p>
         <button class="add-to-cart">Add to Cart</button>
       </div>
-
       <div class="product">
         <img src="images/Luxury Villa.jpg" alt="Luxury Villa">
         <h3>Luxury Villa</h3>
         <p>R2,500,000</p>
         <button class="add-to-cart">Add to Cart</button>
       </div>
-
       <div class="product">
         <img src="images/mansion.jpg" alt="Elegant Mansion">
         <h3>Elegant Mansion</h3>
@@ -70,7 +77,6 @@
         <button class="add-to-cart">Add to Cart</button>
       </div>
     </div>
-
     <div id="cart-items"></div>
     <button id="checkout">Checkout</button>
   </section>
