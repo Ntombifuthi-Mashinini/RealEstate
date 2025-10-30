@@ -254,20 +254,34 @@ footer {
   text-decoration: none;
 }
 
+#mobile-nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+#nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
 @media (max-width: 768px) {
-  nav ul {
+  #nav-links {
     display: none;
     flex-direction: column;
-    gap: 0.5rem;
     background: var(--accent-color);
     position: absolute;
-    top: 70px;
-    right: 20px;
+    top: 100%;
+    right: 0;
+    width: 200px;
     padding: 1rem;
-    border-radius: 10px;
+    border-radius: 0 0 5px 5px;
   }
 
-  nav ul.show {
+  #nav-links.show {
     display: flex;
   }
 
@@ -276,8 +290,4 @@ footer {
   }
 }
 
-@media (min-width: 769px) {
-  #mobile-nav-toggle {
-    display: none;
-  }
-}
+

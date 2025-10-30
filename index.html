@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <header>
+  <header style="background-image: url('images/header-bg.jpg');">
     <div class="header-container">
       <div class="logo">
         <img src="images/Royal estates logo.png" alt="Royal Estate Logo">
@@ -24,8 +24,9 @@
         </ul>
       </nav>
 
+      <button id="mobile-nav-toggle" aria-label="Toggle Mobile Menu">☰</button>
+
       <button id="theme-toggle" title="Toggle Theme">🌙</button>
-      <button id="mobile-nav-toggle">☰</button>
     </div>
   </header>
 
@@ -48,7 +49,6 @@
 
   <section id="cart">
     <h2>Our Properties</h2>
-
     <div class="products">
       <div class="product">
         <img src="images/home apartment.jpg" alt="Modern Apartment">
@@ -56,14 +56,12 @@
         <p>R1,200,000</p>
         <button class="add-to-cart">Add to Cart</button>
       </div>
-
       <div class="product">
         <img src="images/Luxury Villa.jpg" alt="Luxury Villa">
         <h3>Luxury Villa</h3>
         <p>R2,500,000</p>
         <button class="add-to-cart">Add to Cart</button>
       </div>
-
       <div class="product">
         <img src="images/mansion.jpg" alt="Elegant Mansion">
         <h3>Elegant Mansion</h3>
@@ -71,7 +69,6 @@
         <button class="add-to-cart">Add to Cart</button>
       </div>
     </div>
-
     <div id="cart-items"></div>
     <button id="checkout">Checkout</button>
   </section>
@@ -99,4 +96,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-

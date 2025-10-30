@@ -14,13 +14,6 @@ toggleBtn.addEventListener("click", () => {
   }
 });
 
-const mobileNavBtn = document.getElementById("mobile-nav-toggle");
-const navLinks = document.getElementById("nav-links");
-
-mobileNavBtn.addEventListener("click", () => {
-  navLinks.classList.toggle("show");
-});
-
 const addButtons = document.querySelectorAll(".add-to-cart");
 const cartDiv = document.getElementById("cart-items");
 let cart = [];
@@ -83,4 +76,17 @@ form.addEventListener("submit", (e) => {
 
   successMsg.classList.remove("hidden");
   form.reset();
+});
+
+const navLinks = document.getElementById("nav-links");
+const mobileNavBtn = document.getElementById("mobile-nav-toggle");
+
+mobileNavBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+
+navLinks.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("show");
+  });
 });
