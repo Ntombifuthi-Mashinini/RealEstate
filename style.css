@@ -1,22 +1,21 @@
-:root {
-  --bg-color: #f8f1e4;
-  --text-color: #4b3f2f;
-  --accent-color: #b89f7d;
-}
 
 body {
-  margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: var(--bg-color);
-  color: var(--text-color);
-  scroll-behavior: smooth;
+  background: #f8f1e4;
+  color: #4b3f2f;
 }
 
+#hero h1,
+#hero p {
+  color: white;
+}
+
+
 header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--accent-color) url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/175/356/original/background.jpg?1761823577') center/cover no-repeat;
+  background-color: #b89f7d;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
@@ -24,20 +23,20 @@ header {
 }
 
 .header-container {
-  width: 100%;
   max-width: 1200px;
+  margin: auto;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  color: white;
   font-weight: bold;
   font-size: 1.5rem;
-  color: white;
 }
 
 .logo img {
@@ -50,13 +49,14 @@ nav ul {
   display: flex;
   list-style: none;
   gap: 1rem;
+  margin: 0;
+  padding: 0;
 }
 
 nav a {
   color: white;
   text-decoration: none;
   font-weight: 500;
-  transition: opacity 0.3s;
 }
 
 nav a:hover {
@@ -68,16 +68,36 @@ nav a:hover {
   background: transparent;
   border: none;
   font-size: 1.5rem;
+  color: white;
   cursor: pointer;
 }
 
 #hero {
+  background-image: url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/175/358/original/A_building.jpg?1761835388'
+);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: #f8f1e4;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 3rem 1rem;
+  padding: 2rem;
+  box-sizing: border-box;
 }
+
 
 #hero h1 {
   font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#hero p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
 }
 
 h2 {
@@ -98,28 +118,30 @@ h2::after {
   border-radius: 2px;
 }
 
-#cta {
-  background: var(--accent-color);
+.btn {
+  background: #b89f7d;
+  color: white;
   border: none;
   padding: 0.7rem 1.5rem;
-  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 6px;
   cursor: pointer;
-  margin-top: 1rem;
-  transition: background 0.3s;
-  border-radius: 5px;
+  transition: background 0.3s ease;
 }
 
-#cta:hover {
+.btn:hover {
   background: #a48968;
 }
 
-#features {
-  padding: 2rem;
-  text-align: center;
+#hero h1,
+#hero p {
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }
 
-#features h2 {
-  margin-bottom: 1rem;
+#features {
+  padding: 2rem 1rem;
+  text-align: center;
 }
 
 .features-container {
@@ -134,17 +156,13 @@ h2::after {
   border-radius: 10px;
   padding: 1rem;
   width: 150px;
-  transition: transform 0.3s;
 }
 
-.feature-card:hover {
-  transform: scale(1.05);
-}
-
+/* ===== Products Section ===== */
 .products {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
   padding: 1rem;
 }
@@ -155,11 +173,6 @@ h2::after {
   border-radius: 10px;
   text-align: center;
   width: 250px;
-  transition: transform 0.3s;
-}
-
-.product:hover {
-  transform: scale(1.03);
 }
 
 .product img {
@@ -171,14 +184,15 @@ h2::after {
 }
 
 .add-to-cart {
-  background: var(--accent-color);
-  border: none;
+  background: #b89f7d;
   color: white;
+  border: none;
   padding: 0.5rem 1rem;
-  cursor: pointer;
   border-radius: 5px;
+  cursor: pointer;
 }
 
+/* ===== Cart Section ===== */
 #cart-items {
   margin: 1rem;
 }
@@ -188,20 +202,17 @@ h2::after {
   color: white;
   border: none;
   padding: 0.7rem 1.5rem;
-  cursor: pointer;
   border-radius: 5px;
+  cursor: pointer;
   display: block;
   margin: 1rem auto;
 }
 
+/* ===== Contact Section ===== */
 #contact {
   background: #efe2d0;
-  padding: 2rem;
+  padding: 2rem 1rem;
   text-align: center;
-}
-
-#contact h2 {
-  margin-bottom: 1rem;
 }
 
 form {
@@ -213,10 +224,11 @@ form {
   padding: 2rem;
   border-radius: 15px;
   max-width: 500px;
-  margin: 0 auto;
+  margin: auto;
 }
 
-input, textarea {
+input,
+textarea {
   width: 80%;
   padding: 0.5rem;
   border: 1px solid #ccc;
@@ -224,13 +236,12 @@ input, textarea {
 }
 
 #send-btn {
-  background: var(--accent-color);
-  border: none;
+  background: #b89f7d;
   color: white;
+  border: none;
   padding: 0.7rem 1.5rem;
-  cursor: pointer;
   border-radius: 5px;
-  transition: background 0.3s;
+  cursor: pointer;
 }
 
 #send-btn:hover {
@@ -241,8 +252,9 @@ input, textarea {
   display: none;
 }
 
+/* ===== Footer ===== */
 footer {
-  background: var(--accent-color);
+  background: #b89f7d;
   color: white;
   text-align: center;
   padding: 1rem;
@@ -256,11 +268,6 @@ footer {
 
 #mobile-nav-toggle {
   display: none;
-  background: transparent;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: white;
 }
 
 #nav-links {
@@ -272,7 +279,7 @@ footer {
   #nav-links {
     display: none;
     flex-direction: column;
-    background: var(--accent-color);
+    background: #b89f7d;
     position: absolute;
     top: 100%;
     right: 0;
@@ -289,5 +296,3 @@ footer {
     display: block;
   }
 }
-
-

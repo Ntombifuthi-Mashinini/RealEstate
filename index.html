@@ -8,10 +8,10 @@
 </head>
 <body>
 
-  <header style="background-image: url('images/header-bg.jpg');">
+  <header>
     <div class="header-container">
       <div class="logo">
-        <img src="images/Royal estates logo.png" alt="Royal Estate Logo">
+        <img src="images/RE.jpg" alt="Royal Estate Logo">
         <span>Royal Estate</span>
       </div>
 
@@ -25,64 +25,67 @@
       </nav>
 
       <button id="mobile-nav-toggle" aria-label="Toggle Mobile Menu">☰</button>
-
       <button id="theme-toggle" title="Toggle Theme">🌙</button>
     </div>
   </header>
 
-  <section id="hero">
-    <h1>Welcome to Royal Estate</h1>
-    <p>Find your dream property with elegance and comfort.</p>
-    <button id="cta">Explore Listings</button>
-  </section>
-
-  <section id="features">
-    <h2>Why Choose Royal Estate</h2>
-    <div class="features-container">
-      <div class="feature-card">Luxury Apartments</div>
-      <div class="feature-card">Prime Locations</div>
-      <div class="feature-card">Affordable Prices</div>
-      <div class="feature-card">Trusted Agents</div>
-      <div class="feature-card">24/7 Support</div>
-    </div>
-  </section>
-
-  <section id="cart">
-    <h2>Our Properties</h2>
-    <div class="products">
-      <div class="product">
-        <img src="images/home apartment.jpg" alt="Modern Apartment">
-        <h3>Modern Apartment</h3>
-        <p>R1,200,000</p>
-        <button class="add-to-cart">Add to Cart</button>
+  <main>
+    <section id="hero">
+      <div class="hero-content">
+        <h1>Welcome to Royal Estate</h1>
+        <p>Find your dream property with elegance and comfort.</p>
+        <button id="cta" class="btn">Explore Listings</button>
       </div>
-      <div class="product">
-        <img src="images/Luxury Villa.jpg" alt="Luxury Villa">
-        <h3>Luxury Villa</h3>
-        <p>R2,500,000</p>
-        <button class="add-to-cart">Add to Cart</button>
-      </div>
-      <div class="product">
-        <img src="images/mansion.jpg" alt="Elegant Mansion">
-        <h3>Elegant Mansion</h3>
-        <p>R3,800,000</p>
-        <button class="add-to-cart">Add to Cart</button>
-      </div>
-    </div>
-    <div id="cart-items"></div>
-    <button id="checkout">Checkout</button>
-  </section>
+    </section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form id="contact-form">
-      <input type="text" id="name" placeholder="Your Name">
-      <input type="email" id="email" placeholder="Your Email">
-      <textarea id="message" placeholder="Your Message"></textarea>
-      <button type="submit" id="send-btn">Send</button>
-    </form>
-    <p id="success-message" class="hidden">Thank you! We’ll get back to you soon.</p>
-  </section>
+    <section id="features">
+      <h2>Why Choose Royal Estate</h2>
+      <div class="features-container">
+        <div class="feature-card">Luxury Apartments</div>
+        <div class="feature-card">Prime Locations</div>
+        <div class="feature-card">Affordable Prices</div>
+        <div class="feature-card">Trusted Agents</div>
+        <div class="feature-card">24/7 Support</div>
+      </div>
+    </section>
+
+    <section id="cart">
+      <h2>Our Properties</h2>
+      <div class="products">
+        <div class="product">
+          <img src="images/Modern Apartment.jpg" alt="Modern Apartment">
+          <h3>Modern Apartment</h3>
+          <p>R1,200,000</p>
+          <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="images/Luxury Villa.jpg" alt="Luxury Villa">
+          <h3>Luxury Villa</h3>
+          <p>R2,500,000</p>
+          <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="images/Elegant Mansion.jpg" alt="Elegant Mansion">
+          <h3>Elegant Mansion</h3>
+          <p>R3,800,000</p>
+          <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <div id="cart-items"></div>
+      <button id="checkout" class="btn">Checkout</button>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form id="contact-form">
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="email" id="email" placeholder="Your Email">
+        <textarea id="message" placeholder="Your Message"></textarea>
+        <button type="submit" id="send-btn" class="btn">Send</button>
+      </form>
+      <p id="success-message" class="hidden">Thank you! We’ll get back to you soon.</p>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Royal Estate | All rights reserved</p>
@@ -96,3 +99,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+

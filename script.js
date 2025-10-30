@@ -3,15 +3,29 @@ let darkMode = false;
 
 toggleBtn.addEventListener("click", () => {
   darkMode = !darkMode;
+
   if (darkMode) {
     document.body.style.background = "#3b2f2f";
     document.body.style.color = "#f8f1e4";
-    toggleBtn.textContent = "🌙";
+    toggleBtn.textContent = "🌞";
   } else {
     document.body.style.background = "#f8f1e4";
     document.body.style.color = "#4b3f2f";
-    toggleBtn.textContent = "🌞";
+    toggleBtn.textContent = "🌙";
   }
+});
+
+const navLinks = document.getElementById("nav-links");
+const mobileNavBtn = document.getElementById("mobile-nav-toggle");
+
+mobileNavBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+
+navLinks.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("show");
+  });
 });
 
 const addButtons = document.querySelectorAll(".add-to-cart");
@@ -20,26 +34,30 @@ let cart = [];
 
 addButtons.forEach((btn) => {
   btn.addEventListener("click", (e) => {
-    const productName = e.target.parentElement.querySelector("h3").textContent;
-    const productPrice = e.target.parentElement.querySelector("p").textContent;
+    const product = e.target.closest(".product");
+    const name = product.querySelector("h3").textContent;
+    const price = product.querySelector("p").textContent;
 
-    const item = { name: productName, price: productPrice };
-    cart.push(item);
+    cart.push({ name, price });
     displayCart();
   });
 });
 
 function displayCart() {
   cartDiv.innerHTML = "";
+
   cart.forEach((item, index) => {
     const div = document.createElement("div");
     div.textContent = `${item.name} - ${item.price}`;
+
     const removeBtn = document.createElement("button");
     removeBtn.textContent = "Remove";
+    removeBtn.className = "btn";
     removeBtn.onclick = () => {
       cart.splice(index, 1);
       displayCart();
     };
+
     div.appendChild(removeBtn);
     cartDiv.appendChild(div);
   });
@@ -60,6 +78,7 @@ const successMsg = document.getElementById("success-message");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
   const message = document.getElementById("message").value.trim();
@@ -76,17 +95,4 @@ form.addEventListener("submit", (e) => {
 
   successMsg.classList.remove("hidden");
   form.reset();
-});
-
-const navLinks = document.getElementById("nav-links");
-const mobileNavBtn = document.getElementById("mobile-nav-toggle");
-
-mobileNavBtn.addEventListener("click", () => {
-  navLinks.classList.toggle("show");
-});
-
-navLinks.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("show");
-  });
 });
