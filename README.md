@@ -45,3 +45,13 @@ Royal Estate is a modern, responsive real estate website designed to showcase pr
     <button id="theme-toggle" title="Toggle Theme">🌙</button>
   </div>
 </header>
+
+## 📸 Screenshots
+
+### Stitch AI Design Inspiration
+![Stitch AI Design](images/stitch-design.png.png)
+
+### Final Landing Page
+![Final Landing Page](images/final-landing-page.png.png)
+
+
